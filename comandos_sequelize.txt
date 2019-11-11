@@ -1,0 +1,53 @@
+
+//Para criar uma nova base dd dados
+sequelize db: create
+
+//para executar os arquivos de migration
+node_modules/.bin/sequelize db:migrate
+
+//Para reverter todos arquivos migration
+yarn sequelize db:migrate:undo:all
+
+//Para os mais recentes
+yarn sequelize db:migrate:undo
+
+//undo nomearquivo 
+npx sequelize-cli db:migrate:undo:all --to 20191107124404-create-users.js
+
+
+//seeder para popular o banco
+
+//criar arquivo de migration para nova classe
+sequelize model:generate --name EstudoTipoMigration --attributes id:INTEGER,descricao:STRING, codigo:STRING
+sequelize model:generate --name EstudoUsuarioFuncionalidadeMigration --attributes usuarioId:INTEGER, funcionalidadeId:INTEGER
+
+//Cria arquivo migration vazio
+yarn sequelize migration:create --name=create-users
+
+yarn sequelize migration:create --name=create-estudo_funcionalidade
+yarn sequelize migration:create --name=create-estudo_funcionalidade
+yarn sequelize migration:create --name=create-estudo_usuario_funcionalidade
+
+
+//Cria arquivo de seeders
+yarn sequelize seed:generate --name users
+yarn sequelize seed:generate --name estudo_funcionalidade
+
+
+// Executar seed
+npx sequelize-cli db:seed --seed 20191108130222-estudo_perfil_seeders.js   
+
+//Desfazendo seeders mais recentes
+yarn sequelize db:seed:undo
+
+//Reverter um seed específico.
+yarn sequelize db:seed:undo --seed name-of-seed-as-in-data
+
+//Se desfazendo de todos a seeders gerados até o presente momento.
+yarn sequelize db:seed:undo:all
+
+//tabela que controla as migrations
+SELECT TOP (1000) [name]
+  FROM [TMOV_DEV].[dbo].[SequelizeMeta]
+  
+
