@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "d7d44516-922b-489e-bd3b-d603e97f54ac",
+		"name": "API Node Estudos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://172.25.1.178:8000/estudos/1",
+					"protocol": "http",
+					"host": [
+						"172",
+						"25",
+						"1",
+						"178"
+					],
+					"port": "8000",
+					"path": [
+						"estudos",
+						"1"
+					]
+				},
+				"description": "de"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Estudos ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/estudosUsuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"estudosUsuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Funcionalidades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/funcionalidade/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"funcionalidade",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Estudos  Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/estudosUsuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"estudosUsuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Usuario Funcionalidade",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/estudosUsuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"estudosUsuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Estudos",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\" : \"camila da silva\",\n\t\"email\" : \"cacaaaaaaaa211345678a@gmail.com\"\n\t\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/estudosUsuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"estudosUsuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Fuincionalidade",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\" : \"camila da silva\",\n\t\"email\" : \"cacaaaaaaaa211345678a@gmail.com\"\n\t\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/estudosUsuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"estudosUsuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 6,\n\t\"nome\": \"teste\",\n\t\"cpf\":\"06546513165434534543534543534545433\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/estudos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"estudos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert UsuarioFuncionalidade",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Joaquin lopes16\",\n\t\"email\": \"teste16@gmailc.com\",\n\t\"password\" : \"LOPAKJSSJJODNA24315\",\n\t\"estudo_perfil_id\": 2,\n\t\"funcionalidades_id\" : [1, 2, 3]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar UsuarioFuncionalidade",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Joaquin lopes16\",\n\t\"email\": \"teste16@gmailc.com\",\n\t\"password\" : \"LOPAKJSSJJODNA24315\",\n\t\"estudo_perfil_id\": 2,\n\t\"funcionalidades_id\" : [1, 2, 3]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t \n\t\"nome\": \"teste\",\n\t\"cpf\":\"06546513165434534543534543534545433\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/estudos/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"estudos",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
