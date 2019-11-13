@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors'); //para acessar mesma origem do react
 const app = express();
 const port = 8000;
-const { EstudoUsuario, EstudoUsuarioFuncionalidade, EstudoFuncionalidade, EstudoPerfil  } = require('./app/models');
+const { EstudoUsuario, EstudoUsuarioFuncionalidade, EstudoFuncionalidade, EstudoPerfil  } = require('./src/app/models');
 
 
 //configura o bodyParser para pegar POSTS mais tarde
@@ -81,7 +81,6 @@ router.post('/estudosUsuarioFuncionalidade', (req, res) => {
 
 //buscar
 router.get('/estudosUsuarioFuncionalidade/:id', (req, res) => {
-
     EstudoUsuario.findAll({
         where : { id : req.params.id },
         include: [
@@ -92,12 +91,8 @@ router.get('/estudosUsuarioFuncionalidade/:id', (req, res) => {
                 model: EstudoFuncionalidade, as: 'funcionalidades'
             }
         ],
-        
         })
     .then(usuario => res.json(usuario));
-
-
-
 });
 
 router.post('/registro', async (req, res) => {
